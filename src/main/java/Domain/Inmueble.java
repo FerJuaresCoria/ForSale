@@ -4,7 +4,7 @@ public abstract class Inmueble {
 
     private int metrosCuadrados;
     private int cantidadAmbientes;
-    private int valorInmueble;
+    protected int valorInmueble;
 
     /*
     * TODO:
