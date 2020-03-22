@@ -1,6 +1,6 @@
 package Domain;
 
-public class Inmueble {
+public abstract class Inmueble {
 
     private int metrosCuadrados;
     private int cantidadAmbientes;
@@ -12,10 +12,9 @@ public class Inmueble {
     *
     * */
 
-    public Inmueble(int metrosCuadrados, int cantidadAmbientes, int valorInmueble){
+    public Inmueble(int metrosCuadrados, int cantidadAmbientes){
         this.metrosCuadrados = metrosCuadrados;
         this.cantidadAmbientes = cantidadAmbientes;
-        this.valorInmueble = valorInmueble;
     }
 
     //Getters
@@ -25,8 +24,8 @@ public class Inmueble {
     public int getCantidadAmbientes() {
         return cantidadAmbientes;
     }
-    public int getValorInmueble() {
-        return valorInmueble;
+    public int getValorInmueble(){
+        return  valorInmueble;
     }
 
     //Setters
@@ -36,7 +35,8 @@ public class Inmueble {
     public void setCantidadAmbientes(int cantidadAmbientes) {
         this.cantidadAmbientes = cantidadAmbientes;
     }
-    public void setValorInmueble(int valorInmueble) {
-        this.valorInmueble = valorInmueble;
-    }
+
+
+    //Abstracts
+    public abstract void setValorInmueble();
 }
