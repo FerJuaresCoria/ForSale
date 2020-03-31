@@ -1,8 +1,8 @@
-package Domain;
+package Domain.Inmueble;
 
 public class Departamento extends Inmueble{
 
-    private final int VALOR_INMUEBLE = 350000;
+    private final int VALOR_AMBIENTE = 350000;
 
     public Departamento(int metrosCuadrados, int cantidadAmbientes){
         super(metrosCuadrados, cantidadAmbientes);

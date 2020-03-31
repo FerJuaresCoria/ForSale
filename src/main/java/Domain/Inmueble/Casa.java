@@ -1,17 +1,17 @@
-package Domain;
+package Domain.Inmueble;
 
 public class Casa extends Inmueble{
 
-    private int valorCasa
+    private double valorCasa;
 
-    public Casa(int metrosCuadrados, int cantidadAmbientes, int valorCasa){
+    public Casa(double metrosCuadrados, int cantidadAmbientes, double valorCasa){
         super(metrosCuadrados, cantidadAmbientes);
         this.valorCasa = valorCasa;
         setValorInmueble();
     }
 
     //Getters
-    public int getValorCasa() {
+    public double getValorCasa() {
         return valorCasa;
     }
 
@@ -22,7 +22,7 @@ public class Casa extends Inmueble{
 
     //Abstract
     public void setValorInmueble(){
-        valorInmueble = valorCasa;
+        super.valorInmueble = valorCasa + super.zona.getPrecioPlus();
     }
 
 }

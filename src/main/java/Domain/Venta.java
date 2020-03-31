@@ -1,21 +1,17 @@
 package Domain;
 
-public class Venta {
+import Domain.Inmueble.Inmueble;
+
+public class Venta extends Operacion{
 
     private final double PORCENTAJE_COMISION = 1.5;
-    private int comision;
 
-    public Venta(Inmueble inmueble){
-        setComision(inmueble);
+    public Venta(){
     }
 
-    //Getters
-    public int getComision() {
-        return comision;
-    }
-
-    //Setters
-    public void setComision(Inmueble inmueble){
-        this.comision = (int)(PORCENTAJE_COMISION * 100)/ inmueble.getValorInmueble();
+    //Overrides
+    @Override
+    public double obtenerComision(){
+        return (PORCENTAJE_COMISION * 100)/ super.inmueble.getValorInmueble();
     }
 }

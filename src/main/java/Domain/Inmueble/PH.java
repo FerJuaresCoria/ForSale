@@ -1,4 +1,4 @@
-package Domain;
+package Domain.Inmueble;
 
 public class PH extends Inmueble{
 
@@ -12,7 +12,7 @@ public class PH extends Inmueble{
 
     //Abstract
     public void setValorInmueble(){
-        int valor = getMetrosCuadrados() * VALOR_METRO_CUADRADO;
+        double valor = getMetrosCuadrados() * VALOR_METRO_CUADRADO;
         if (valor <= VALOR_MINIMO){
             valorInmueble = VALOR_MINIMO;
         } else {

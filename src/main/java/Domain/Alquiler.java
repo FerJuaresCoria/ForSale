@@ -1,29 +1,29 @@
 package Domain;
 
-public class Alquiler {
+import Domain.Inmueble.Inmueble;
+
+public class Alquiler extends Operacion{
 
     private final int VALOR_DIVIDENDO = 50000;
     private int mesesContrato;
-    private int comision;
 
-    public Alquiler(int mesesContrato, Inmueble inmueble){
+    public Alquiler(int mesesContrato){
         this.mesesContrato = mesesContrato;
-        setComision(inmueble);
     }
 
     //getters
     public int getMesesContrato() {
         return mesesContrato;
     }
-    public int getComision() {
-        return comision;
-    }
 
     //Setters
-    public void setMesesContrato(int mesesContrato){
+    public void setMesesContrato ( int mesesContrato){
         this.mesesContrato = mesesContrato;
     }
-    public void setComision(Inmueble inmueble){
-        this.comision = (this.mesesContrato * inmueble.getValorInmueble())/VALOR_DIVIDENDO;
+
+    //Overrides
+    @Override
+    public double obtenerComision(){
+        return (this.mesesContrato * super.inmueble.getValorInmueble())/VALOR_DIVIDENDO;
     }
 }
