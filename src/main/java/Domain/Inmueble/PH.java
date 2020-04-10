@@ -2,8 +2,8 @@ package Domain.Inmueble;
 
 public class PH extends Inmueble{
 
-    private final int VALOR_MINIMO = 500000;
-    private final int VALOR_METRO_CUADRADO = 14000;
+    private static int VALOR_MINIMO = 500000;
+    private static int VALOR_METRO_CUADRADO = 14000;
 
     public PH(int metrosCuadrados, int cantidadAmbientes){
         super(metrosCuadrados, cantidadAmbientes);
@@ -12,9 +12,9 @@ public class PH extends Inmueble{
 
     //Abstract
     public void setValorInmueble(){
-        double valor = getMetrosCuadrados() * VALOR_METRO_CUADRADO;
-        if (valor <= VALOR_MINIMO){
-            valorInmueble = VALOR_MINIMO;
+        double valor = getMetrosCuadrados() * PH.VALOR_METRO_CUADRADO;
+        if (valor <= PH.VALOR_MINIMO){
+            valorInmueble = PH.VALOR_MINIMO;
         } else {
             valorInmueble = valor;
         }

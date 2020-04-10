@@ -4,7 +4,7 @@ import Domain.Inmueble.Inmueble;
 
 public class Alquiler extends Operacion{
 
-    private final int VALOR_DIVIDENDO = 50000;
+    private static int VALOR_DIVIDENDO = 50000;
     private int mesesContrato;
 
     public Alquiler(int mesesContrato){
@@ -24,6 +24,6 @@ public class Alquiler extends Operacion{
     //Overrides
     @Override
     public double obtenerComision(){
-        return (this.mesesContrato * super.inmueble.getValorInmueble())/VALOR_DIVIDENDO;
+        return (this.mesesContrato * super.inmueble.getValorInmueble())/Alquiler.VALOR_DIVIDENDO;
     }
 }
